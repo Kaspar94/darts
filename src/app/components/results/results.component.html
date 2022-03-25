@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nimi</th>
+      <th scope="col" sortable="points">Punkte</th>
+      <th scope="col">Visked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players">
+      <th scope="row">{{ player.id }}</th>
+      <td>
+
+        {{ player.name }}
+      </td>
+      <td>{{ player.points | number }}</td>
+      <td>{{ player.throwHistory }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,46 @@
+section {
+  max-width: 260px;
+  display: flex;
+  flex-flow: row wrap;
+  /* height: 500px; */
+  justify-content: center;
+  margin-top: 20px;
+
+  div.value {
+    margin: 1px;
+    font-size: 25px;
+    border-style: groove;
+    border-width: 2mm;
+    width: 50px;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+.points {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 20px; */
+  margin: 10px 0;
+
+  > * {
+    margin-right: 5px;
+  }
+
+  span {
+    font-size: 20px;
+
+    input {
+      width: 50px;
+    }
+  }
+}
+
+.history {
+  display: flex;
+  flex-flow: row nowrap;
+
+  span {
+    margin: 5px;
+  }
+}

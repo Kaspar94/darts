@@ -1,0 +1,18 @@
+<div class="user-management">
+  <div class="add">
+    <input type="text" placeholder="name" [(ngModel)]="name" />
+    <button type="button" class="btn btn-primary btn-sm" (click)="addNewUser()">Add player</button>
+  </div>
+  <div>
+    <span *ngFor="let player of players" class="player">
+      <div>
+          {{player.name}}
+      </div>
+    </span>
+
+
+  </div>
+
+</div>
+
+

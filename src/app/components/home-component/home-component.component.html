@@ -1,0 +1,9 @@
+<tabset>
+  <tab heading="Players" id="tab1" (selectTab)="selectedTab($event)">
+    <app-user-management (playerAdded)="setPlayers($event)"></app-user-management>
+  </tab>
+  <tab heading="Points" (selectTab)="selectedTab($event)" [disabled]="players == null || players.length < 1">
+    <app-points-adder  [player]="players[selectedPlayerIndex]" (finished)="selectNextPlayer($event)"></app-points-adder>
+  </tab>
+  <tab heading="Results" [disabled]="players == null || players.length < 1" (selectTab)="selectedTab($event)"><app-results [players]="players"></app-results></tab>
+</tabset>

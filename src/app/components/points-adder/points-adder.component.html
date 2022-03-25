@@ -1,0 +1,26 @@
+<div class="pointsAdder" *ngIf="player !== undefined && player !== null">
+  <div class="description">
+    Add points for {{ player.name }} <span *ngIf="pointsCalculated">{{ pointsCalculated }}</span>
+  </div>
+  <section>
+    <div class="value" *ngFor="let nr of values" (click)="selectValue(nr)">{{ nr }}</div>
+  </section>
+  <div class="points">
+
+            <span>
+            <input type="number" [(ngModel)]="selected"  width="100px" />
+            </span>
+            <button type="button" class="btn btn-primary btn-sm" [disabled]="disabled2"
+              (click)="multiply(2)">X2</button>
+            <button type="button" class="btn btn-primary btn-sm" [disabled]="disabled3"
+              (click)="multiply(3)">X3</button>
+              <button type="button" class="btn btn-primary btn-sm" (click)="commit()">Lisa</button>
+            <button type="button" class="btn btn-primary btn-sm" [disabled]="!pointsCalculated || pointsCalculated < 0"
+              (click)="addPointsToUser()">Save</button>
+
+  </div>
+  <div class="history">
+    <label>Throws:</label>
+    <span *ngFor="let val of thrownValues">{{ val }}</span>
+  </div>
+</div>
